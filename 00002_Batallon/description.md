@@ -4,7 +4,7 @@
 Si sabemos que a Marsellus no le hicieron encargos, a Vincent le hicieron 4 encargos y a Winston 3, las posibilidades son:
 
 ``` prolog
-batallon(Personajes, 5).
+?- batallon(Personajes, 5).
 Personajes = [marsellus,vincent,winston] ; % 0 + 4 + 3 = 7 encargos en total
 Personajes = [vincent, winston].           % 4 + 3 = 7 encargos en total
 ``` 
