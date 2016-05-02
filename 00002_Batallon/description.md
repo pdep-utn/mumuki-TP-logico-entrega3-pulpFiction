@@ -11,3 +11,5 @@ Personajes = [vincent, winston].           % 4 + 3 = 7 encargos en total
 
 * Vincent solo no supera los 5 encargos, ni Winston solo.
 * Marsellus al no tener encargos no ayuda a Vincent ni a Winston para sumar una solución más
+
+Asumir que existe el predicado `cantidadEncargos/2` y `personajesRespetables/1`
