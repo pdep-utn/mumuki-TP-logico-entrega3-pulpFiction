@@ -5,4 +5,5 @@ type: learning
 beta: false
 language: prolog
 id_format: '%05d'
-order: []
+order:
+- 1
