@@ -7,7 +7,7 @@ test('Vincent y Winston forman parte del batallón de 5 encargos', nondet):-
   member(vincent, Personajes).
   
 test('Vincent solo no forma un batallón porque no llega a 5 encargos'):-
-  not(escuadron([vincent], 5)).
+  not(batallon([vincent], 5)).
   
 test('Nunca se forma un batallón sin integrantes porque no se llega a 5 encargos'):-
-  not(escuadron([], 5)).  
+  not(batallon([], 5)).  
