@@ -1,1 +1,1 @@
-test('falopa'):-True is True.
+test('falopa'):-True is 2 = 2.
