@@ -1,0 +1,3 @@
+
+* Tenés que hacer la explosión combinatoria de personajes...
+* ...cuya sumatoria de encargos supere 15
