@@ -1,4 +1,5 @@
 > Generar un predicado quienesSuperan/4 que relaciona 
+>
 > * una lista de personajes, 
 > * un número 
 > * y un criterio
