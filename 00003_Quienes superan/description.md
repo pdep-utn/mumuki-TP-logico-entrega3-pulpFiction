@@ -1,5 +1,8 @@
-> Generar un predicado quienesSuperan/4 que relaciona una lista de personajes, un número y un criterio
-> con la lista de personajes cuyo criterio supera ese número
+> Generar un predicado quienesSuperan/4 que relaciona 
+> * una lista de personajes, 
+> * un número 
+> * y un criterio
+> * con la lista de personajes cuyo criterio supera ese número
 
 ``` prolog
 ? personajes(Personajes), quienesSuperan(Personajes, 2, cuantosAmigos, Quienes)
