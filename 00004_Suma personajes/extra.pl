@@ -1,3 +1,4 @@
+
 % Resolver el predicado cuantosAmigos/2, que relaciona un personaje con la 
 % cantidad de amigos que tiene
 cuantosAmigos(Personaje, CantidadAmigos):-personaje(Personaje, _),
