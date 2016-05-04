@@ -12,7 +12,10 @@ Total = 3.
 Total = 7.
 
 ? sumaPersonajes([marsellus, winston, mia, jimmie, jules, vincent], nivelRespeto, Total).
-Total = 45.
+Total = 45.1.
+
+? sumaPersonajes([], nivelRespeto, Total).
+Total = 0.
 ```
 
 Se cuenta con un predicado cuantosAmigos/2, que relaciona un personaje con la 
