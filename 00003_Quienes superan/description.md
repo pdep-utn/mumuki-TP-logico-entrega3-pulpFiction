@@ -6,7 +6,7 @@
 > * con la lista de personajes cuyo criterio supera ese número
 
 ``` prolog
-? personajes(Personajes), quienesSuperan(Personajes, 2, cuantosAmigos, Quienes)
+? quienesSuperan(Personajes, 2, cuantosAmigos, Quienes)
 ```
 
 Se cuenta con un predicado cuantosAmigos/2, que relaciona un personaje con la 
