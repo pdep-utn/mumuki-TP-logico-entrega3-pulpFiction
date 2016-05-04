@@ -8,12 +8,12 @@
 ? sumaPersonajes([jimmie, jules, vincent], cuantosAmigos, Total).
 Total = 2.
 
-? quienesSuperan([marsellus, winston, mia, jimmie, jules, vincent], 2, cantidadEncargos, PersonajesQueCumplen).
-PersonajesQueCumplen = [winston,vincent].
+? sumaPersonajes([marsellus, winston, mia, jimmie, jules, vincent], cantidadEncargos, Total).
+Total = 45.
 ```
 
 Se cuenta con un predicado cuantosAmigos/2, que relaciona un personaje con la 
 cantidad de amigos que tiene
 
-:point_up: El predicado debe ser inversible para el cuarto argumento
+:point_up: El predicado debe ser inversible para el tercer argumento
 
