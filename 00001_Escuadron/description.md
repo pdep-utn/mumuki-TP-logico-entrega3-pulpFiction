@@ -10,7 +10,8 @@ Personajes = [marsellus, vincent] ;             % 35
 Personajes = [marsellus, winston] ;             % 30
 Personajes = [marsellus] ;                      % 20
 Personajes = [vincent, winston] ;               % 25
-false.                                          % Otras combinaciones no suman 15
+false.                                          
+% Otras combinaciones no suman 15
 ``` 
 
 Asumir que el predicado `nivelRespeto/2` ya existe, lo mismo que `personajesRespetables/1`.
