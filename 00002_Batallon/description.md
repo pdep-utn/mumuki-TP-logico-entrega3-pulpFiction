@@ -1,4 +1,4 @@
-> batallon/2: armar un batallón relaciona una serie de personajes respetables y una cantidad
+> batallon/2: relaciona una serie de personajes respetables y una cantidad
 > donde la suma de todos los encargos de esos personajes respetables debe superar la cantidad deseada.
 
 Si sabemos que a Marsellus no le hicieron encargos, a Vincent le hicieron 4 encargos y a Winston 3, las posibilidades son:
