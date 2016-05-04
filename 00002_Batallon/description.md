@@ -5,8 +5,10 @@ Si sabemos que a Marsellus no le hicieron encargos, a Vincent le hicieron 4 enca
 
 ``` prolog
 ?- batallon(Personajes, 5).
-Personajes = [marsellus,vincent,winston] ; % 0 + 4 + 3 = 7 encargos en total
-Personajes = [vincent, winston].           % 4 + 3 = 7 encargos en total
+Personajes = [marsellus,vincent,winston] ; 
+    % 0 + 4 + 3 = 7 encargos en total
+Personajes = [vincent, winston].           
+    % 4 + 3 = 7 encargos en total
 ``` 
 
 * Vincent solo no supera los 5 encargos, ni Winston solo.
