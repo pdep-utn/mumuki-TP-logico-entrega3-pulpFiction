@@ -2,8 +2,8 @@
 >
 > * una lista de personajes, 
 > * un número 
-> * y un criterio
-> * con la lista de personajes cuyo criterio supera ese número
+> * un criterio que relaciona un personaje y un número
+> * y la lista de personajes cuyo criterio supera ese número
 
 ``` prolog
 ? quienesSuperan([jimmie, jules, vincent], 1, cuantosAmigos, PersonajesQueCumplen).
