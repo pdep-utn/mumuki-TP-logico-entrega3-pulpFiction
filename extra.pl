@@ -103,27 +103,79 @@ tieneCerca(Personaje, Otro):-trabajaPara(Otro, Personaje).
 sanCayetano(Personaje):-tieneCerca(Personaje, _), 
     forall(tieneCerca(Personaje, Alguien), encargo(Personaje, Alguien, _)).
 
-% Punto 3
-% personajesRespetables/1: genera la lista de todos los personajes respetables. 
-% Es respetable cuando su actividad tiene un nivel de respeto mayor a 9. Se sabe que:
-% - Las actrices tienen un nivel de respeto de la décima parte de su cantidad de peliculas.
-% - Los mafiosos que resuelven problemas tienen un nivel 10 de respeto,
-%    los matones 5 por cada encargo que tienen y los capos 20.
-% - Al resto no se les debe ningún nivel de respeto. 
-cantidadEncargos(Personaje, CantidadEncargos):-personaje(Personaje, _),
+% Punto 3 
+%Realizar el predicado nivelRespeto/2 que relaciona a un personaje con su nivel de respeto.
+%El nivel de respeto se calcula como:
+%Para las actrices, la décima parte de su cantidad de peliculas.
+%Para los mafiosos que resuelven problemas es 10, mientras que para los capos asciende a 20.
+%Para Vincent es exactamente 15.
+%Para el resto no se cuenta con un nivel de respeto.
+
+nivelRespeto(Personaje,Nivel):-
+    personaje(Personaje,Ocupacion),
+    respeto(Ocupacion, Nivel).
+
+nivelRespeto(vincent,15).
+
+respeto(mafioso(resuelveProblemas),10).
+respeto(mafioso(capo),20).
+respeto(actriz(Peliculas),Nivel):-length(Peliculas,Cant), Nivel is Cant/10.
+
+
+% Punto 4
+% Asumiendo que ya se sabe calcular el nivel de respeto de cualquier personaje, se quiere analizar la composición de personajes respetables de la película. Un personaje es respetable si su nivel de respeto es mayor a 9.
+% Se quiere averiguar la cantidad de personajes respetables y no respetables.
+
+%? respetabilidad(Respetables,NoRespetables).
+%Respetables = 3
+%NoRespetables = 7
+
+respetabilidad(Resp,NoResp):- cantidadRespetables(Resp),
+    cantidadNoRespetables(NoResp).
+    
+cantidadRespetables(Resp):-
+    findall(_,respetable(_),L),
+    length(L,Resp).
+cantidadNoRespetables(NoResp):-
+    findall(_,(personaje(P,_),not(respetable(P))),L),
+    length(L,NoResp).
+
+respetable(P):- nivelRespeto(P,N),N>9.
+
+% Punto 5
+% Se quiere averiguar cual es el personaje mas atareado, que es quien más encargos tenga.
+% Para ello es necesario definir tambien un predicado cantidadEncargos/2 que relaciona un personaje con la cantidad de encargos que le hicieron.
+% Como requisito, se debe utilizar forall/1 en la resolución.
+
+% ? masAtareado(Quien).
+% Quien = winston
+% Porque tiene 4 encargos, mientras que vincent tiene 2 y el vendedor sólo 1.
+
+masAtareado(Personaje):-
+    cantidadEncargos(Personaje, Maximo),
+    forall(cantidadEncargos(_, Cant), Maximo>=Cant).
+
+cantidadEncargos(Personaje, CantidadEncargos):-
+    personaje(Personaje, _),
     findall(Encargo, encargo(_, Personaje, Encargo), Encargos), 
     length(Encargos, CantidadEncargos).
 
-nivelRespeto(Personaje, 20):-personaje(Personaje, mafioso(capo)).
-nivelRespeto(Personaje, NivelRespeto):-personaje(Personaje, mafioso(maton)),
-    cantidadEncargos(Personaje, CantidadEncargos), NivelRespeto is CantidadEncargos * 5.
+% SOLUCION AL PUNTO 3 ANTERIOR
+%nivelRespeto(Personaje, 20):-personaje(Personaje, mafioso(capo)).
+%nivelRespeto(Personaje, NivelRespeto):-personaje(Personaje, mafioso(maton)),
+%    cantidadEncargos(Personaje, CantidadEncargos), NivelRespeto is CantidadEncargos * 5.
     % otra opción es reemplazar la línea de arriba por ...
     % findall(5, encargo(_, Personaje, _), Encargos), sumlist(Encargos, NivelRespeto).
     % fin
-nivelRespeto(Personaje, 10):-personaje(Personaje, mafioso(resuelveProblemas)).
-nivelRespeto(Personaje, Respeto):-personaje(Personaje, actriz(Peliculas)), 
-	length(Peliculas, Long),
-	Respeto is Long * 0.1.
+%nivelRespeto(Personaje, 10):-personaje(Personaje, mafioso(resuelveProblemas)).
+%nivelRespeto(Personaje, Respeto):-personaje(Personaje, actriz(Peliculas)), 
+%	length(Peliculas, Long),
+%	Respeto is Long * 0.1.
 
-personajesRespetables(Personajes):-
-    findall(Personaje, (nivelRespeto(Personaje, NivelRespeto), NivelRespeto > 9), Personajes). 
+%personajesRespetables(Personajes):-
+%    findall(Personaje, (nivelRespeto(Personaje, NivelRespeto), NivelRespeto > 9), Personajes). 
+    
+    
+    
+    
+    
