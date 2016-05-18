@@ -1,8 +1,8 @@
-> Resolver el predicado sumaPersonajes/3, que relaciona
->
-> * una lista de personajes
-> * un predicado que relaciona al personaje con un valor numérico
-> * y la suma de los valores que tienen todos los personajes en base a ese criterio
+Resolver el predicado `sumaPersonajes/3`, que relaciona
+
+* una lista de personajes
+* un predicado que relaciona al personaje con un valor numérico
+* y la suma de los valores que tienen todos los personajes en base a ese criterio
 
 ``` prolog
 ? sumaPersonajes([jimmie, jules, vincent], cuantosAmigos, Total).

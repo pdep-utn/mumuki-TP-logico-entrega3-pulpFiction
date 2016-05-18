@@ -1,7 +1,7 @@
-> escuadron/1: armar un escuadrón con 1 ó más personajes respetables que sumen entre todos más de 
->15 puntos de nivel de respeto. Generar un predicado que permita obtener la combinación posible. 
+Un escuadrón es un conjunto de personajes respetables que sumen entre todos un nivel de respeto mayor a 15. 
+Definir el predicado `escuadron/1` que permita obtener todos los posibles escuadrones que se pueden armar. 
 
-Recordemos que los niveles de respeto son 10 para winston, 15 para vincent y 20 para marsellus, vemos la combinación de posibilidades que suman más de 15 puntos:
+Recordemos que los niveles de respeto son 10 para winston, 15 para vincent y 20 para marsellus. Las combinaciones de posibilidades que suman un nivel de respeto mayor a 15 son:
 
 ``` prolog
 ?- escuadron(Personajes).
@@ -14,4 +14,4 @@ false.
 % Otras combinaciones no suman 15
 ``` 
 
-Asumir que el predicado `nivelRespeto/2` ya existe, lo mismo que `personajesRespetables/1`.
+Asumir que el predicado `nivelRespeto/2` ya existe, lo mismo que `respetable/1`.
