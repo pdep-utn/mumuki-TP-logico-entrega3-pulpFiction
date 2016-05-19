@@ -8,11 +8,14 @@ test('Escuadron incluye a  [marsellus, vincent, winston]'):-
   member( vincent,Escuadron),
   member( marsellus,Escuadron).
 
-test('Escuadron con solo winston'):-
-  escuadron([winston]).
-  
+test('Escuadron winston y vincent pero sin marsellus'):-
+  escuadron(Escuadron),
+  member( winston,Escuadron),
+  member( vincent,Escuadron),
+  not(member( marsellus,Escuadron)).
+
 test('Escuadron con solo marsellus'):-
-  escuadron([marcellus]).
+  escuadron([marsellus]).
   
   
 test('Vincent solo no forma un escuadron porque no llega a 15'):-
