@@ -8,12 +8,6 @@ test('Batallon de 5 encargos incluye a  marsellus, vincent y winston'):-
   member( vincent,Batallon),
   member( marsellus,Batallon).
 
-test('Escuadron winston y vincent pero sin marsellus'):-
-  escuadron(Escuadron),
-  member( winston,Escuadron),
-  member( vincent,Escuadron),
-  not(member( marsellus,Escuadron)).
-
 test('Vincent y Winston forman parte del batallón de 5 encargos, sin marsellus', nondet):-
   batallon(Personajes, 5),
   member(winston, Personajes),
