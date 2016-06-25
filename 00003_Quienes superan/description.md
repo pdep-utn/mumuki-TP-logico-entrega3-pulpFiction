@@ -7,7 +7,7 @@ Generar un predicado `quienesSuperan/4` que relacione
 
 ``` prolog
 ? quienesSuperan([jimmie, jules, vincent], 1, cuantosAmigos, PersonajesQueCumplen).
-PersonajesQueCumplen = [vincent].
+PersonajesQueCumplen = [vincent, jules].
 
 ? quienesSuperan([marsellus, winston, mia, jimmie, jules, vincent], 2, cantidadEncargos, PersonajesQueCumplen).
 PersonajesQueCumplen = [winston,vincent].
