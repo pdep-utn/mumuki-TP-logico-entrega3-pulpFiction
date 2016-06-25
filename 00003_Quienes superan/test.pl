@@ -1,8 +1,8 @@
-test('Quienes superan de una lista vacía se relaciona con una lista vacía, no importa qué]'):-
+test('Quienes superan de una lista vacía se relaciona con una lista vacía, no importa qué'):-
   quienesSuperan([], _, _, []).
   
 test('Vincent y jules son los únicos que tiene más de 1 amigo'):-
-  quienesSuperan([jimmie, jules, vincent], 1, cuantosAmigos, [vincent, jules]).  
+  quienesSuperan([jimmie, jules, vincent], 1, cuantosAmigos, [jules, vincent]).  
   
 test('Winston y Vincent tienen más de 2 encargos'):-  
   quienesSuperan([marsellus, winston, mia, jimmie, jules, vincent], 2, cantidadEncargos, [winston,vincent]).
