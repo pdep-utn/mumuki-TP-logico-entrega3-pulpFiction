@@ -13,8 +13,7 @@ PersonajesQueCumplen = [vincent].
 PersonajesQueCumplen = [winston,vincent].
 ```
 
-Se cuenta con un predicado cuantosAmigos/2, que relaciona un personaje con la 
-cantidad de amigos que tiene
+Se cuenta con un predicado cuantosAmigos/2, que relaciona un personaje con la cantidad de amigos que tiene. Tiene en cuenta que el personaje sea amigo de otro, o que otro sea amigo del personaje (no importa el orden).
 
 :point_up: El predicado debe ser inversible para el cuarto argumento
 
