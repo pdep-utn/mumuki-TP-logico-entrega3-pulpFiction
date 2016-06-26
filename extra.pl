@@ -67,6 +67,8 @@ personaje(mia,        actriz([foxForceFive])).
 personaje(butch,      boxeador).
 personaje(bernardo,   mafioso(cerebro)).
 personaje(bianca,     actriz([elPadrino1])).
+personaje(elVendedor, vender([humo, iphone])).
+personaje(jimmie,     vender([auto])).
 
 % También tenemos información de los encargos que le hacen los jefes a sus 
 % empleados, codificada en la base de la siguiente forma: 
