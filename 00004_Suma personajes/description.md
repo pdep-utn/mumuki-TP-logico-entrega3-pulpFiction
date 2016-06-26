@@ -6,7 +6,7 @@ Resolver el predicado `sumaPersonajes/3`, que relaciona
 
 ``` prolog
 ? sumaPersonajes([jimmie, jules, vincent], cuantosAmigos, Total).
-Total = 3.
+Total = 5.
 
 ? sumaPersonajes([marsellus, winston, mia, jimmie, jules, vincent], cantidadEncargos, Total).
 Total = 7.
