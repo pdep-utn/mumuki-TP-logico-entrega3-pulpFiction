@@ -2,8 +2,10 @@
 tags:
 - findall
 - definición de predicados de orden superior
-layout: editor_bottom
+layout: input_bottom
+editor: code
 type: problem
 extra_visible: true
 language: 
 teacher_info: ''
+manual_evaluation: false
